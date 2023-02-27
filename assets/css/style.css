@@ -10,7 +10,7 @@ navbar styles
 	transition: 0.5s;
 }
 .navbar .navbar-brand {
-	color: #212121;
+	color: #fff;
 }
 .navbar .navbar-brand:hover {
 	color: var(--primary-color);
@@ -52,7 +52,29 @@ navbar styles
 	webkit-backdrop-filter: saturate(180%) blur(20px);
 	backdrop-filter: saturate(180%) blur(20px);
 }
- .banner {
- 	height: 100vh;
- 	background-color: black;
- }
+.banner {
+	height: 100vh;
+	background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,0.8)), url('../images/homepage_background_image.jpg');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner #particles-js {
+	height: 100%;
+}
+.banner .header-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.banner .header-text h1,
+.banner .header-text h3 {
+	text-align: center;
+	color: white;
+	animation: fadeInUp 1s ease forwards;
+}
+.header-text h1 {
+	font-weight: 700;
+	text-shadow: 1px 1px 3px #fff;
+}
