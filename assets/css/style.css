@@ -2,6 +2,17 @@
 	--primary-color: #008080;
 	font-family: 'Markazi Text', serif;
 }
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 /*
 navbar styles
 */
@@ -24,9 +35,15 @@ navbar styles
 }
 .navbar-scrolled {
 	background-color: rgba(255, 255, 255, 0.5) !important;
-	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 3px 10px rgba(0, 128, 128, 0.15);
 	webkit-backdrop-filter: saturate(180%) blur(20px);
 	backdrop-filter: saturate(180%) blur(20px);
+}
+.navbar-scrolled .navbar-brand {
+	color: var(--primary-color);
+}
+.navbar-scrolled .nav-item .nav-link {
+	color: #008080;
 }
 .navbar li {
   position:relative;
@@ -46,6 +63,22 @@ navbar styles
     width: 80%;
     left: 10%;
 }
+.navbar-scrolled li::after {
+	content: '';
+    display: block;
+    width: 0;
+    position:absolute;
+    left:50%;
+    bottom: 20%;
+    height: 2px;
+    background: #008080;
+    transition: cubic-bezier(.77,0,.18,1) 0.5s;
+}
+.navbar-scrolled li:hover::after {
+    width: 80%;
+    left: 10%;
+}
+
 .custom-bg {
 	background-color: rgba(255, 255, 255, 0.5) !important;
 	/*box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);*/
@@ -54,7 +87,7 @@ navbar styles
 }
 .banner {
 	height: 100vh;
-	background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,0.8)), url('../images/homepage_background_image.jpg');
+	background: linear-gradient(rgba(0, 0, 0,.1),rgba(0, 0, 0,0.8)), url('../images/homepage_background_image.jpg');
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,9 +105,43 @@ navbar styles
 .banner .header-text h3 {
 	text-align: center;
 	color: white;
+}
+.banner .header-text .subtitle-animation {
 	animation: fadeInUp 1s ease forwards;
 }
 .header-text h1 {
 	font-weight: 700;
-	text-shadow: 1px 1px 3px #fff;
+	text-shadow: 1px 1px 3px #008080;
+}
+
+#about .about-text {
+	font-size: 2rem;
+} 
+
+#about .about-title {
+	font-size: 4rem;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--primary-color);
+}
+
+#about .about-section-header .about-title-animation {
+	animation: fadeInUp 1s ease forwards;
+}
+
+#about .bg_strock_text {
+	position: absolute;
+	font-size: 220px;
+    color: white;
+    font-weight: normal;
+    font-family: "futuraheavy";
+    letter-spacing: 3px;
+    text-shadow: 2px 10px 10px rgba(0, 128, 128, 0.1);
+    line-height: 220px;
+    z-index: -1;
+}
+
+#about .about-bg-stroke {
+	position: absolute;
+	margin-right: 0;
 }
