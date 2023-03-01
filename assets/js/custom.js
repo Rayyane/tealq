@@ -13,10 +13,10 @@ toggler.addEventListener("click", function() {
 });
 console.log(width);
 window.addEventListener('scroll', function() {
-	if (window.innerWidth > 500 && window.scrollY >= 560) {
+	if (window.innerWidth > 500 && window.scrollY >= 56) {
 		navEl.classList.add('navbar-scrolled');
 	}
-	else if (window.innerWidth > 500 && window.scrollY < 560){
+	else if (window.innerWidth > 500 && window.scrollY < 56){
 		navEl.classList.remove('navbar-scrolled');
 	}
 	else if (window.innerWidth <= 500 && window.scrollY >= 2) {
