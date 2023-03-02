@@ -63,7 +63,7 @@ navbar styles
 }
 .banner {
 	min-height: 100vh;
-	/*background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0,128,128,0.2));*/
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
 	/*background-position: center;
     background-repeat: no-repeat;
     background-size: cover;*/
@@ -134,15 +134,33 @@ navbar styles
 	}
 }*/
 
+#about {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
 #about .about-text {
-	font-size: 1.5rem;
-} 
+	font-size: 2rem;
+}
+
+#about .about-section-header,
+#about .about-text {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
 
 #about .about-title {
-	font-size: 3rem;
+	font-size: 3.5rem;
+	font-weight: 800;
 	/*text-transform: uppercase;
 	text-align: center;*/
 	color: var(--primary-color);
+}
+
+#about .about-title-image {
+	position: absolute;
+	width: 180px;
+	margin-top: -50px;
+	margin-left: -50px;
 }
 
 #about .about-section-header .about-title-animation {
